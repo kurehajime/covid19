@@ -20,7 +20,7 @@
     "検査実施数": "検査実施数",
     "都内": "都内",
     "県内発生（疑い例・接触者調査）": "県内発生（疑い例・接触者調査）",
-    "その他（チャーター便・クルーズ船）": "その他（チャーター便・クルーズ船）",
+    "その他（チャーター便・クルーズ船）": "その他",
     "件": {
       "tested": "件"
     }
@@ -28,7 +28,7 @@
   "en": {
     "検査実施数": "Number of tests conducted",
     "県内発生（疑い例・接触者調査）": "Emerged in Kagoshima (Suspected cases or contactees)",
-    "その他（チャーター便・クルーズ船）": "Others (Returnees or Cruise ship passengers)",
+    "その他（チャーター便・クルーズ船）": "Others",
     "件": {
       "tested": "cases"
     }
