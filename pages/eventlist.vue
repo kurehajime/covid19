@@ -1,6 +1,6 @@
 <template>
-  <div class="List">
-    <h2 class="List-Heading">
+  <div class="EventList">
+    <h2 class="EventList-Heading">
       {{ $t('イベント一覧') }}
     </h2>
     <div class ="radio_box">
@@ -16,43 +16,32 @@
   </div>
 </template>
 
-<i18n src="./list.i18n.json"></i18n>
+<i18n src="./eventlist.i18n.json"></i18n>
 
 <script>
 import TextCard from '@/components/TextCard.vue'
+import Data from '@/data/events.json'
 
 export default {
   components: {
     TextCard
   },
   data() {
+    var items = [];
+    for (let i = 0; i < Data.events.length; i++) {
+      const element = Data.events[i];
+      items.push(        
+        {
+          title: element.title,
+          body: [
+            element.description,
+            element.url,
+          ].join('<br />'),
+          event_type:element.stop == false ?  'go' : 'stop'
+        });
+    }
     return {
-      items: [
-        {
-          title: `1. ${this.$t('絵画鑑賞会')}`,
-          body: [
-            this.$t('2020/04/31'),
-            this.$t('〇〇ホール２F'),
-          ].join('<br />'),
-          event_type:'go'
-        },
-        {
-          title: `2. ${this.$t('[中止] 腕相撲大会')}`,
-          body: [
-            this.$t('2020/03/31'),
-            this.$t('腕相撲大会は中止となりました'),
-          ].join('<br />'),
-          event_type:'stop'
-        },
-        {
-          title: `3. ${this.$t('リモート会議セミナー')}`,
-          body: [
-            this.$t('2020/03/31'),
-            this.$t('○○会館４F会議室'),
-          ].join('<br />'),
-          event_type:'go'
-        },
-      ],
+      items: items,
       event_type:'all'
     }
   },

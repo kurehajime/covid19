@@ -150,7 +150,7 @@ export default {
         {
           icon: 'mdi-account-multiple',
           title: this.$t('イベント情報'),
-          link: this.localePath('/list'),
+          link: this.localePath('/eventlist'),
           divider: true
         },
         {

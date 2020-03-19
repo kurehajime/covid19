@@ -1,0 +1,23 @@
+{
+    "events":
+    [
+        {
+            "title":"絵画鑑賞会",
+            "description":"2020/03/31<br/>説明1'",
+            "url":"http://google.com",
+            "stop":false
+        },
+        {
+            "title":"[中止]腕相撲大会",
+            "description":"2020/03/31<br/>腕相撲大会は中止となりました'",
+            "url":"http://google.com",
+            "stop":true
+        },
+        {
+            "title":"リモート会議セミナー",
+            "description":"2020/03/31<br/>○○会館４F会議室'",
+            "url":"http://google.com",
+            "stop":false
+        }
+    ]
+}
