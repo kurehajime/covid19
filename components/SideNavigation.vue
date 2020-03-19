@@ -148,6 +148,12 @@ export default {
           divider: true
         },
         {
+          icon: 'mdi-account-multiple',
+          title: this.$t('イベント情報'),
+          link: this.localePath('/list'),
+          divider: true
+        },
+        {
           title: this.$t('新型コロナウイルス感染症に関する情報'),
           link:
             'http://www.pref.kagoshima.jp/ae06/kenko-fukushi/kenko-iryo/kansen/kansensho/coronavirus.html'
