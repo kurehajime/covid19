@@ -20,28 +20,49 @@
 
 <script>
 import TextCard from '@/components/TextCard.vue'
-import Data from '@/data/events.json'
 
 export default {
   components: {
     TextCard
+  },  
+  beforeMount() {
+    let url = './api/events'
+    let thisVue = this;
+    fetch(url
+    ,{
+       method: "GET",
+       mode: "no-cors",
+       credentials: "same-origin",
+       headers: {
+            "Content-Type": "application/json; charset=utf-8",
+        },
+        redirect: "follow"
+    })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(events) {
+      let items = [];
+      for (let i = 0; i < events.length; i++) {
+        const element = events[i];
+        items.push(        
+          {
+            title: element.title,
+            body: [
+              element.description,
+              '<a href="'+element.url+'">'+element.url+'</a>',
+            ].join('<br />'),
+            event_type:element.stop == "false" ?  'go' : 'stop'
+          });
+      }
+      thisVue.items = items;
+    });
+
+
   },
   data() {
-    var items = [];
-    for (let i = 0; i < Data.events.length; i++) {
-      const element = Data.events[i];
-      items.push(        
-        {
-          title: element.title,
-          body: [
-            element.description,
-            element.url,
-          ].join('<br />'),
-          event_type:element.stop == false ?  'go' : 'stop'
-        });
-    }
     return {
-      items: items,
+      items: [],
       event_type:'all'
     }
   },

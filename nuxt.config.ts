@@ -261,7 +261,8 @@ const config: Configuration = {
     webpack: {
       poll: true
     }
-  }
+  },
+  "serverMiddleware":["~/api/index.js"]
 }
 
 export default config
