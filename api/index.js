@@ -32,7 +32,7 @@ function returnJson(url, resp, key) {
       })
     })
     .on('error', e => {
-      console.log(e.message) // エラー時
+      // console.log(e.message) // エラー時
     })
 }
 
