@@ -31,7 +31,7 @@ function returnJson(url, resp, key) {
         resp.send(body)
       })
     })
-    .on('error', e => {
+    .on('error', _ => {
       // console.log(e.message) // エラー時
     })
 }
