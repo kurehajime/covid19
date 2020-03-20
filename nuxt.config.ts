@@ -107,10 +107,7 @@ const config: Configuration = {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    '@nuxtjs/vuetify',
-    '@nuxt/typescript-build'
-  ],
+  buildModules: ['@nuxtjs/vuetify', '@nuxt/typescript-build'],
   /*
    ** Nuxt.js modules
    */
@@ -262,7 +259,7 @@ const config: Configuration = {
       poll: true
     }
   },
-  'serverMiddleware':['~/api/index.js']
+  serverMiddleware: ['~/api/index.js']
 }
 
 export default config
