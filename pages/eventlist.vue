@@ -25,7 +25,7 @@ export default {
   components: {
     TextCard
   },  
-  beforeMount() {
+  created() {
     let url = './api/events'
     let thisVue = this;
     fetch(url
