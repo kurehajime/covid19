@@ -262,7 +262,7 @@ const config: Configuration = {
       poll: true
     }
   },
-  "serverMiddleware":["~/api/index.js"]
+  'serverMiddleware':['~/api/index.js']
 }
 
 export default config
